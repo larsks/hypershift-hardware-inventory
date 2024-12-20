@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: hardware-inventory
+commonLabels:
+  app: hardware-inventory
+
+resources:
+- infraenv.yaml
+- capi-provider-role.yaml
+- pull-secret.yaml
